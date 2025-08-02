@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome to Imamu Nafiulmadaniy</title>
+<head><link rel="stylesheet" href="styles.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header, footer { background-color: #0f5132; color: white; text-align: center; padding: 20px; }
+    nav { background-color: #e0f7e9; padding: 10px; text-align: center; }
+    nav a { margin: 10px; text-decoration: none; color: #0f5132; font-weight: bold; }
+    select { padding: 5px; margin-left: 10px; }
+    .box { margin: 20px auto; padding: 15px; width: 80%; border-radius: 10px; background: #fff; border-left: 5px solid #0f5132; }
+    footer { margin-top: 30px; }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
-  <p>Website is working correctly!</p>
+
+<header>
+  <h1 id="title">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+  <p id="subtitle">In the Name of Allah, the Most Merciful</p>
+</header>
+
+<nav>
+  <a href="hadith.html" id="nav-hadith">Hadith</a>
+  <a href="fiqh.html" id="nav-fiqh">Fiqh</a>
+  <a href="family.html" id="nav-family">Family</a>
+  <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+  <a href="about.html" id="nav-about">About</a>
+  <select id="languageSelect" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+    <option value="ha">Hausa</option>
+  </select>
+</nav>
+
+<div class="box">
+  <h2 id="ayahTitle">🌙 Daily Ayah</h2>
+  <p id="ayahText">"Indeed, in the remembrance of Allah do hearts find rest." (Qur’an 13:28)</p>
+</div>
+
+<div class="box">
+  <h2 id="hadithTitle">📖 Daily Hadith</h2>
+  <p id="hadithText">The Prophet ﷺ said: “Whoever follows a path to seek knowledge, Allah will make a path to Paradise easy for him.” (Muslim)</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 <span id="footerText">Imamu Nafiulmadaniy Da'awatus Salafiyyah. All rights reserved.</span></p>
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      title: "Imamu Nafiulmadaniy Da'awatus Salafiyyah",
+      subtitle: "In the Name of Allah, the Most Merciful",
+      nav: {
+        hadith: "Hadith",
+        fiqh: "Fiqh",
+        family: "Family",
+        dashboard: "Dashboard",
+        about: "About"
+      },
+      ayahTitle: "🌙 Daily Ayah",
+      ayahText: `"Indeed, in the remembrance of Allah do hearts find rest." (Qur’an 13:28)`,
+      hadithTitle: "📖 Daily Hadith",
+      hadithText: `The Prophet ﷺ said: “Whoever follows a path to seek knowledge, Allah will make a path to Paradise easy for him.” (Muslim)`,
+      footerText: "Imamu Nafiulmadaniy Da'awatus Salafiyyah. All rights reserved."
+    },
+    ar: {
+      title: "إمام نافع المدني دعوة السلفية",
+      subtitle: "بسم الله الرحمن الرحيم",
+      nav: {
+        hadith: "الحديث",
+        fiqh: "الفقه",
+        family: "الأسرة",
+        dashboard: "لوحة التحكم",
+        about: "عن الموقع"
+      },
+      ayahTitle: "🌙 الآية اليومية",
+      ayahText: "﴿ألا بذكر الله تطمئن القلوب﴾ (الرعد: ٢٨)",
+      hadithTitle: "📖 الحديث اليومي",
+      hadithText: "قال النبي ﷺ: «من سلك طريقًا يلتمس فيه علمًا، سهل الله له به طريقًا إلى الجنة» (رواه مسلم)",
+      footerText: "إمام نافع المدني دعوة السلفية. جميع الحقوق محفوظة."
+    },
+    ha: {
+      title: "Imamu Nafiulmadaniy Da’awatus Salafiyyah",
+      subtitle: "Da sunan Allah, Mai Rahama, Mai Jinƙai",
+      nav: {
+        hadith: "Hadisi",
+        fiqh: "Fikihu",
+        family: "Iyali",
+        dashboard: "Dashboard",
+        about: "Game da Mu"
+      },
+      ayahTitle: "🌙 Ayar mu ta yau",
+      ayahText: `"Lalle, a cikin ambaton Allah zukata suna samun nutsuwa." (Suratu Ra'ad: 28)`,
+      hadithTitle: "📖 Hadisin Rana",
+      hadithText: `Manzon Allah ﷺ ya ce: "Duk wanda ya bi hanya don neman ilimi, Allah zai sauƙaƙa masa hanya zuwa Aljanna." (Muslim)`,
+      footerText: "Imamu Nafiulmadaniy Da’awatus Salafiyyah. Dukkan haƙƙi mallakinmu ne."
+    }
+  };
+
+  function changeLanguage() {
+    const lang = document.getElementById("languageSelect").value;
+    const t = translations[lang];
+
+    document.getElementById("title").innerText = t.title;
+    document.getElementById("subtitle").innerText = t.subtitle;
+    document.getElementById("nav-hadith").innerText = t.nav.hadith;
+    document.getElementById("nav-fiqh").innerText = t.nav.fiqh;
+    document.getElementById("nav-family").innerText = t.nav.family;
+    document.getElementById("nav-dashboard").innerText = t.nav.dashboard;
+    document.getElementById("nav-about").innerText = t.nav.about;
+    document.getElementById("ayahTitle").innerText = t.ayahTitle;
+    document.getElementById("ayahText").innerText = t.ayahText;
+    document.getElementById("hadithTitle").innerText = t.hadithTitle;
+    document.getElementById("hadithText").innerText = t.hadithText;
+    document.getElementById("footerText").innerText = t.footerText;
+  }
+</script>
+
 </body>
 </html>
