@@ -1,56 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tafseer & Fatwa - Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem('lang', lang);
-      location.reload();
-    }
-    function detectLanguage() {
-      const savedLang = localStorage.getItem('lang');
-      const userLang = savedLang || navigator.language.slice(0, 2);
-      document.documentElement.lang = userLang;
-    }
-    window.onload = detectLanguage;
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tafseer Section | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="main-nav"></div>
+
   <header>
-    <h1>Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="aqeedah.html">Aqeedah</a>
-      <a href="tafsir.html">Tafseer</a>
-      <a href="fatwa.html">Fatwa</a>
-      <select onchange="setLanguage(this.value)">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
-    </nav>
+    <h1>Tafseer Section</h1>
   </header>
 
   <main>
-    <section id="tafsir">
-      <h2>Tafseer Section</h2>
-      <p>Authentic Qur’anic commentary from recognized Salafi scholars. Materials available in PDF, audio, and video formats with search and category filters.</p>
-      <!-- Dynamic Tafsir content to be added here -->
-    </section>
-
-    <section id="fatwa">
-      <h2>Fatwa Page</h2>
-      <p>Verified and categorized fatwas, searchable by topic and language. Designed for clarity and reliability based on Quran and Sunnah.</p>
-      <!-- Fatwa filter and list placeholder -->
+    <section>
+      <h2>Authentic Qur’an Tafseer Resources</h2>
+      <p>Listen to and download explanations of the Qur’an based on the understanding of the Salaf.</p>
+      <ul class="downloads">
+        <li><a href="#">Download Tafseer PDF</a></li>
+        <li><a href="#">Download Audio</a></li>
+        <li><a href="#">Download Video</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
 </body>
 </html>
- 
