@@ -1,52 +1,37 @@
-<!-- Dashboard Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-en="Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard">Dashboard | Imamu Nafiulmadaniy</title>
+  <title>Admin Dashboard | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="scripts/lang.js" defer></script>
 </head>
 <body>
+  <div id="main-nav"></div>
+
   <header>
-    <h1 data-en="Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard">
-      Dashboard
-    </h1>
-    <nav>
-      <a href="index.html" data-en="Home" data-ar="الرئيسية" data-ha="Gida">Home</a>
-      <a href="hadith.html" data-en="Hadith" data-ar="الحديث" data-ha="Hadisi">Hadith</a>
-      <a href="fiqh.html" data-en="Fiqh" data-ar="الفقه" data-ha="Fiƙhu">Fiqh</a>
-    </nav>
-    <select id="lang-select">
-      <option value="en">English</option>
-      <option value="ar">العربية</option>
-      <option value="ha">Hausa</option>
-    </select>
+    <h1>Admin Dashboard</h1>
   </header>
+
   <main>
     <section>
-      <h2 data-en="Welcome to Your Dashboard" data-ar="مرحباً بك في لوحة التحكم" data-ha="Barka da zuwa Dashboard ɗinka">
-        Welcome to Your Dashboard
-      </h2>
-      <p data-en="Manage your content, users, and site settings here."
-         data-ar="قم بإدارة المحتوى والمستخدمين وإعدادات الموقع هنا."
-         data-ha="Gudanar da abubuwa, masu amfani da saitunan shafin anan.">
-        Manage your content, users, and site settings here.
-      </p>
-    </section>
-    <section>
-      <h3 data-en="Quick Links" data-ar="روابط سريعة" data-ha="Hanyoyi masu sauri">Quick Links</h3>
-      <ul>
-        <li><a href="#" data-en="Upload Files" data-ar="رفع الملفات" data-ha="Loda Fayil">Upload Files</a></li>
-        <li><a href="#" data-en="Manage Posts" data-ar="إدارة المشاركات" data-ha="Gudanar da Saƙonni">Manage Posts</a></li>
-        <li><a href="#" data-en="Site Analytics" data-ar="تحليلات الموقع" data-ha="Binciken Shafi">Site Analytics</a></li>
-      </ul>
+      <p>Welcome to the admin panel. From here, you can manage uploads, monitor activities, and update content across the platform.</p>
+      <!-- Admin features go here -->
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
 </body>
 </html>
- 
