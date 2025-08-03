@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tafseer | Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const userLang = localStorage.getItem("lang") || navigator.language.slice(0, 2) || "en";
+    document.documentElement.lang = userLang;
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aqeedah.html">Aqeedah</a></li>
+        <li><a href="tafseer.html" class="active">Tafseer</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h2 data-lang="en">Authentic Qur’anic Tafseer</h2>
+      <h2 data-lang="ar">تفسير القرآن الكريم الصحيح</h2>
+      <h2 data-lang="ha">Fassarar Alkur’ani Mai Inganci</h2>
+      <p data-lang="en">Explore trusted explanations by Salafi scholars, including audio and PDF downloads.</p>
+      <p data-lang="ar">استكشف تفسيرات موثوقة من علماء السلف، بما في ذلك التنزيلات الصوتية وPDF.</p>
+      <p data-lang="ha">Karanta Fassarar Qur’ani daga malamai Salafiyawa tare da sauke sauti da PDF.</p>
+    </section>
+
+    <section class="downloads">
+      <h3 data-lang="en">Available Tafseer Files</h3>
+      <h3 data-lang="ar">ملفات التفسير المتاحة</h3>
+      <h3 data-lang="ha">Fayilolin Tafseer da Ake da Su</h3>
+      <ul>
+        <li><a href="/downloads/tafsir_ibnkathir.pdf" download>📄 Ibn Kathir PDF</a></li>
+        <li><a href="/downloads/tafsir_audio.mp3" download>🔊 Audio Tafseer - Shaykh AbdulMuhsin</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Multi-language auto toggle based on saved user selection or browser
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
