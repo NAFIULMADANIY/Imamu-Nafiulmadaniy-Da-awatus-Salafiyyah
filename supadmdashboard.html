@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superadmin Dashboard - Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="language.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-i18n="superadmin_dashboard">Superadmin Dashboard</h1>
+    <nav>
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 data-i18n="admin_management">Add / Remove Admins</h2>
+      <button data-i18n="add_admin">Add Admin</button>
+      <button data-i18n="remove_admin">Remove Admin</button>
+    </section>
+
+    <section>
+      <h2 data-i18n="notifications">Notification Log</h2>
+      <ul>
+        <li>🔔 [2025-08-01] New upload approved by Admin A</li>
+        <li>🔒 [2025-08-02] 2FA reset requested for Admin B</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="ai_security">AI Security Scan System</h2>
+      <button data-i18n="run_scan">Run Full Scan</button>
+      <p data-i18n="security_status">Last scan: No threats detected</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="backup">Backup & Recovery</h2>
+      <button data-i18n="backup_now">Backup Now</button>
+      <button data-i18n="restore">Restore Previous Version</button>
+    </section>
+
+    <section>
+      <h2 data-i18n="legacy_handover">Legacy Handover</h2>
+      <p data-i18n="legacy_text">Nominate a successor and transfer site control if needed.</p>
+      <button data-i18n="nominate">Nominate Successor</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+</body>
+</html>
