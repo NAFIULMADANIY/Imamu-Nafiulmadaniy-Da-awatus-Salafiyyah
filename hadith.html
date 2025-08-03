@@ -1,89 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="styles.css">
-
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hadith - Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; }
-    header, footer { background: #0f5132; color: white; text-align: center; padding: 15px; }
-    nav { background-color: #e0f7e9; padding: 10px; text-align: center; }
-    nav a { margin: 10px; text-decoration: none; color: #0f5132; font-weight: bold; }
-    .container { padding: 20px; }
-    .box { background: white; padding: 15px; margin: 20px auto; width: 80%; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-  </style>
-</head><link rel="stylesheet" href="styles.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hadith | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
+  <header>
+    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hadith.html" class="active">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="ha">Hausa</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1 id="pageTitle">Daily Hadith</h1>
-</header>
+  <main>
+    <section class="content" id="hadithContent">
+      <h2 data-en="Hadith of the Day" data-ar="حديث اليوم" data-ha="Hadisin Rana">
+        Hadith of the Day
+      </h2>
+      <p data-en="The Prophet ﷺ said: 'Whoever believes in Allah and the Last Day should speak good or remain silent.'" 
+         data-ar="قال رسول الله ﷺ: 'من كان يؤمن بالله واليوم الآخر فليقل خيرًا أو ليصمت.'" 
+         data-ha="Annabi ﷺ ya ce: 'Duk wanda ya yi imani da Allah da Ranar Lahira, to ya fadi alheri ko ya yi shiru.'">
+        The Prophet ﷺ said: "Whoever believes in Allah and the Last Day should speak good or remain silent."
+      </p>
+    </section>
+  </main>
 
-<nav>
-  <a href="index.html" id="nav-home">Home</a>
-  <a href="fiqh.html" id="nav-fiqh">Fiqh</a>
-  <a href="family.html" id="nav-family">Family</a>
-  <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
-  <a href="about.html" id="nav-about">About</a>
-  <select id="languageSelect" onchange="changeLanguage()">
-    <option value="en">English</option>
-    <option value="ar">العربية</option>
-    <option value="ha">Hausa</option>
-  </select>
-</nav>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
 
-<div class="container">
-  <div class="box">
-    <h2 id="hadithHeader">📖 Hadith of the Day</h2>
-    <p id="hadithContent">The Prophet ﷺ said: “Whoever believes in Allah and the Last Day, let him speak good or remain silent.” (Bukhari & Muslim)</p>
-  </div>
-</div>
-
-<footer>
-  <p>&copy; 2025 <span id="footerText">Imamu Nafiulmadaniy Da'awatus Salafiyyah</span></p>
-</footer>
-
-<script>
-  const translations = {
-    en: {
-      pageTitle: "Daily Hadith",
-      nav: { home: "Home", fiqh: "Fiqh", family: "Family", dashboard: "Dashboard", about: "About" },
-      hadithHeader: "📖 Hadith of the Day",
-      hadithContent: "The Prophet ﷺ said: “Whoever believes in Allah and the Last Day, let him speak good or remain silent.” (Bukhari & Muslim)",
-      footerText: "Imamu Nafiulmadaniy Da'awatus Salafiyyah"
-    },
-    ar: {
-      pageTitle: "الحديث اليومي",
-      nav: { home: "الرئيسية", fiqh: "الفقه", family: "الأسرة", dashboard: "لوحة التحكم", about: "عن الموقع" },
-      hadithHeader: "📖 الحديث اليومي",
-      hadithContent: "قال النبي ﷺ: «من كان يؤمن بالله واليوم الآخر فليقل خيرًا أو ليصمت» (البخاري ومسلم)",
-      footerText: "إمام نافع المدني دعوة السلفية"
-    },
-    ha: {
-      pageTitle: "Hadisin Rana",
-      nav: { home: "Gida", fiqh: "Fikihu", family: "Iyali", dashboard: "Dashboard", about: "Game da Mu" },
-      hadithHeader: "📖 Hadisin Rana",
-      hadithContent: "Manzon Allah ﷺ ya ce: “Duk wanda ya yi imani da Allah da ranar ƙarshe, to ya faɗi alheri ko ya yi shiru.” (Bukhari & Muslim)",
-      footerText: "Imamu Nafiulmadaniy Da'awatus Salafiyyah"
+  <script>
+    function changeLanguage() {
+      const selected = document.getElementById("languageSelect").value;
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + selected);
+        if (selected === "ar") {
+          document.body.dir = "rtl";
+        } else {
+          document.body.dir = "ltr";
+        }
+      });
     }
-  };
-
-  function changeLanguage() {
-    const lang = document.getElementById("languageSelect").value;
-    const t = translations[lang];
-    document.getElementById("pageTitle").innerText = t.pageTitle;
-    document.getElementById("nav-home").innerText = t.nav.home;
-    document.getElementById("nav-fiqh").innerText = t.nav.fiqh;
-    document.getElementById("nav-family").innerText = t.nav.family;
-    document.getElementById("nav-dashboard").innerText = t.nav.dashboard;
-    document.getElementById("nav-about").innerText = t.nav.about;
-    document.getElementById("hadithHeader").innerText = t.hadithHeader;
-    document.getElementById("hadithContent").innerText = t.hadithContent;
-    document.getElementById("footerText").innerText = t.footerText;
-  }
-</script>
-
+  </script>
 </body>
 </html>
