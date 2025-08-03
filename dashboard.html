@@ -1,30 +1,52 @@
+<!-- Dashboard Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Dashboard | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-en="Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard">Dashboard | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts/lang.js" defer></script>
 </head>
 <body>
   <header>
-    <h1 class="logo">Admin Dashboard</h1>
+    <h1 data-en="Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard">
+      Dashboard
+    </h1>
     <nav>
-      <ul>
-        <li><a href="index.html">← Back to Site</a></li>
-      </ul>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية" data-ha="Gida">Home</a>
+      <a href="hadith.html" data-en="Hadith" data-ar="الحديث" data-ha="Hadisi">Hadith</a>
+      <a href="fiqh.html" data-en="Fiqh" data-ar="الفقه" data-ha="Fiƙhu">Fiqh</a>
     </nav>
+    <select id="lang-select">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="ha">Hausa</option>
+    </select>
   </header>
-
   <main>
-    <section class="content" id="dashboardContent">
-      <h2>Welcome, Admin</h2>
-      <p>This is your dashboard. You will be able to manage content here soon, In sha Allah.</p>
+    <section>
+      <h2 data-en="Welcome to Your Dashboard" data-ar="مرحباً بك في لوحة التحكم" data-ha="Barka da zuwa Dashboard ɗinka">
+        Welcome to Your Dashboard
+      </h2>
+      <p data-en="Manage your content, users, and site settings here."
+         data-ar="قم بإدارة المحتوى والمستخدمين وإعدادات الموقع هنا."
+         data-ha="Gudanar da abubuwa, masu amfani da saitunan shafin anan.">
+        Manage your content, users, and site settings here.
+      </p>
+    </section>
+    <section>
+      <h3 data-en="Quick Links" data-ar="روابط سريعة" data-ha="Hanyoyi masu sauri">Quick Links</h3>
+      <ul>
+        <li><a href="#" data-en="Upload Files" data-ar="رفع الملفات" data-ha="Loda Fayil">Upload Files</a></li>
+        <li><a href="#" data-en="Manage Posts" data-ar="إدارة المشاركات" data-ha="Gudanar da Saƙonni">Manage Posts</a></li>
+        <li><a href="#" data-en="Site Analytics" data-ar="تحليلات الموقع" data-ha="Binciken Shafi">Site Analytics</a></li>
+      </ul>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
 </body>
 </html>
+ 
