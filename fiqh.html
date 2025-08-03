@@ -2,61 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fiqh | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiqh Section | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Dynamic Navigation Placeholder -->
+  <div id="main-nav"></div>
+
   <header>
-    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hadith.html">Hadith</a></li>
-        <li><a href="fiqh.html" class="active">Fiqh</a></li>
-        <li><a href="family.html">Family</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <select id="languageSelect" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-            <option value="ha">Hausa</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
+    <h1>Fiqh Section</h1>
   </header>
 
   <main>
-    <section class="content" id="fiqhContent">
-      <h2 data-en="Fiqh Ruling" data-ar="مسألة فقهية" data-ha="Hukunce-Hukuncen Fiqhu">
-        Fiqh Ruling
-      </h2>
-      <p data-en="Performing wudhu (ablution) is required before every prayer." 
-         data-ar="الوضوء واجب قبل كل صلاة." 
-         data-ha="Yin alwala wajibi ne kafin kowane sallah.">
-        Performing wudhu (ablution) is required before every prayer.
-      </p>
+    <section>
+      <h2>Understanding Islamic Jurisprudence</h2>
+      <p>Download educational materials related to the different schools of thought in Fiqh, based on the Qur’an and Sunnah.</p>
+      <ul class="downloads">
+        <li><a href="#">Download Fiqh PDF</a></li>
+        <li><a href="#">Download Audio</a></li>
+        <li><a href="#">Download Video</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
 
+  <!-- Load nav.html using JavaScript -->
   <script>
-    function changeLanguage() {
-      const selected = document.getElementById("languageSelect").value;
-      const elements = document.querySelectorAll("[data-en]");
-      elements.forEach(el => {
-        el.textContent = el.getAttribute("data-" + selected);
-        if (selected === "ar") {
-          document.body.dir = "rtl";
-        } else {
-          document.body.dir = "ltr";
-        }
-      });
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
   </script>
 </body>
 </html>
