@@ -2,93 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - Imamu Nafiulmadaniy</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header, footer { background: #0f5132; color: white; text-align: center; padding: 15px; }
-    nav { background-color: #e0f7e9; text-align: center; padding: 10px; }
-    nav a { margin: 10px; text-decoration: none; color: #0f5132; font-weight: bold; }
-    .content { max-width: 90%; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; }
-  </style>
-</head><link rel="stylesheet" href="styles.css">
-
-<body><!-- 🔍 SEARCH BAR -->
-<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchContent()" style="padding:8px; width:90%; margin:10px auto; display:block;">
-
-
-<header>
-  <h1>About Us</h1>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="hadith.html">Hadith</a>
-  <a href="fiqh.html">Fiqh</a>
-  <a href="family.html">Family</a>
-  <a href="dashboard.html">Dashboard</a>
-</nav>
-
-<div class="content">
-  <h2>Project Overview</h2>
-  <p><strong>Imamu Nafiulmadaniy Da'awatus Salafiyyah</strong> is a global Islamic da’wah platform designed to spread authentic Salafi teachings through multimedia content and secure admin contribution.</p>
-
-  <h3>Languages Supported:</h3>
-  <ul>
-    <li>Arabic</li>
-    <li>English</li>
-    <li>Hausa</li>
-  </ul>
-
-  <h3>Objectives:</h3>
-  <ul>
-    <li>Educate with Qur’an, Sunnah, and Salafi scholarship</li>
-    <li>Enable structured da’wah delivery worldwide</li>
-    <li>Securely preserve and transfer legacy</li>
-  </ul>
-</div>
-
-<footer>
-  <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
-</footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About - Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>About This Platform</h1>
+    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="fiqh.html">Fiqh</a>
-      <a href="family.html">Family</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="about.html" class="active">About</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li>
+          <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="ha">Hausa</option>
+          </select>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>About Imamu Nafiulmadaniy Da’awatus Salafiyyah</h2>
-      <p>This website was created to spread authentic Salafi da’wah across the globe in Arabic, English, and Hausa. Our mission is to preserve this legacy securely and allow for authorized admin contributions.</p>
-      <p>Founded: July 25, 2025</p>
-      <p>Founder: Nafi’u Aliyu Adam</p>
-    </section>
-
-    <section>
-      <h2>Legacy & Succession</h2>
-      <p>The founder can securely assign successor access. Legacy will be preserved through a backup + recovery system and admin handover feature.</p>
+    <section class="content" id="aboutContent">
+      <h2 data-en="About Us" data-ar="من نحن" data-ha="Game da Mu">
+        About Us
+      </h2>
+      <p data-en="This platform was created to share authentic Islamic knowledge in Arabic, English, and Hausa." 
+         data-ar="تم إنشاء هذا الموقع لنشر المعرفة الإسلامية الأصيلة بالعربية والإنجليزية والهوسا." 
+         data-ha="An kirkiri wannan shafin ne domin yada sahihan ilimin addinin Musulunci cikin Larabci, Turanci da Hausa.">
+        This platform was created to share authentic Islamic knowledge in Arabic, English, and Hausa.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah.</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
+
+  <script>
+    function changeLanguage() {
+      const selected = document.getElementById("languageSelect").value;
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + selected);
+        if (selected === "ar") {
+          document.body.dir = "rtl";
+        } else {
+          document.body.dir = "ltr";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
