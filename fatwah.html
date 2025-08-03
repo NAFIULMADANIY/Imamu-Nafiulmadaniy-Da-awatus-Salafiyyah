@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiqh Section | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Dynamic Navigation Placeholder -->
+  <div id="main-nav"></div>
+
+  <header>
+    <h1>Fiqh Section</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Understanding Islamic Jurisprudence</h2>
+      <p>Download educational materials related to the different schools of thought in Fiqh, based on the Qur’an and Sunnah.</p>
+      <ul class="downloads">
+        <li><a href="#">Download Fiqh PDF</a></li>
+        <li><a href="#">Download Audio</a></li>
+        <li><a href="#">Download Video</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+
+  <!-- Load nav.html using JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
