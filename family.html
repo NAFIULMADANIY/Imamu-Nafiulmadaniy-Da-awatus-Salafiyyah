@@ -1,62 +1,70 @@
+<!-- Family Page (Multilingual) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Family | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en="Family Guidance" data-ar="الأسرة" data-ha="Iyali">Family Guidance</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang.js" defer></script>
 </head>
 <body>
   <header>
-    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+    <h1 data-en="Marriage & Family Guidance" data-ar="الزواج والإرشاد الأسري" data-ha="Shawarwari da Iyali">Marriage & Family Guidance</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hadith.html">Hadith</a></li>
-        <li><a href="fiqh.html">Fiqh</a></li>
-        <li><a href="family.html" class="active">Family</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <select id="languageSelect" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-            <option value="ha">Hausa</option>
-          </select>
-        </li>
-      </ul>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية" data-ha="Gida">Home</a>
+      <a href="fiqh.html" data-en="Fiqh" data-ar="الفقه" data-ha="Fikihu">Fiqh</a>
+      <a href="hadith.html" data-en="Hadith" data-ar="الحديث" data-ha="Hadisi">Hadith</a>
     </nav>
   </header>
-
   <main>
-    <section class="content" id="familyContent">
-      <h2 data-en="Islamic Advice for the Family" data-ar="نصيحة إسلامية للأسرة" data-ha="Shawarwari na Musulunci ga Iyali">
-        Islamic Advice for the Family
-      </h2>
-      <p data-en="The best of you are those who are best to their families." 
-         data-ar="خيركم خيركم لأهله." 
-         data-ha="Mafi alherinku shine wanda yafi kyautatawa iyalinsa.">
-        The best of you are those who are best to their families.
-      </p>
-    </section>
+    <p data-en="Includes: Marriage advice, intimacy, parenting, rights & responsibilities."
+       data-ar="يشمل: نصائح الزواج، العلاقة الزوجية، التربية، الحقوق والمسؤوليات."
+       data-ha="Ya haɗa da: Shawarwari kan aure, kusanci, tarbiyya, haƙƙoƙi da nauyi.">
+      Includes: Marriage advice, intimacy, parenting, rights & responsibilities.
+    </p>
+    <div>
+      <h2 data-en="Downloadable Resources" data-ar="موارد قابلة للتنزيل" data-ha="Abubuwan Saukewa">Downloadable Resources</h2>
+      <a href="/downloads/family-ar.pdf">Arabic PDF</a> |
+      <a href="/downloads/family-en.pdf">English PDF</a> |
+      <a href="/downloads/family-ha.pdf">Hausa PDF</a>
+    </div>
   </main>
-
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
-
-  <script>
-    function changeLanguage() {
-      const selected = document.getElementById("languageSelect").value;
-      const elements = document.querySelectorAll("[data-en]");
-      elements.forEach(el => {
-        el.textContent = el.getAttribute("data-" + selected);
-        if (selected === "ar") {
-          document.body.dir = "rtl";
-        } else {
-          document.body.dir = "ltr";
-        }
-      });
-    }
-  </script>
 </body>
 </html>
+
+<!-- About Page (Multilingual) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en="About Us" data-ar="معلومات عنا" data-ha="Game da Mu">About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-en="About the Da'wah" data-ar="عن الدعوة" data-ha="Game da Da'awah">About the Da'wah</h1>
+    <nav>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية" data-ha="Gida">Home</a>
+      <a href="hadith.html" data-en="Hadith" data-ar="الحديث" data-ha="Hadisi">Hadith</a>
+      <a href="tafsir.html" data-en="Tafseer" data-ar="التفسير" data-ha="Tafsiri">Tafseer</a>
+    </nav>
+  </header>
+  <main>
+    <p data-en="Imamu Nafiulmadaniy Da’awatus Salafiyyah is a global initiative to spread the message of the Qur’an and Sunnah upon the understanding of the Salaf. The site features authentic content and offers a multilingual platform for Muslims worldwide."
+       data-ar="دعوة إمام نافع المدني هي مبادرة عالمية لنشر رسالة القرآن والسنة بفهم السلف. يحتوي الموقع على محتوى موثوق ويوفر منصة متعددة اللغات للمسلمين في جميع أنحاء العالم."
+       data-ha="Imamu Nafiulmadaniy Da’awatus Salafiyyah wani yunƙuri ne na duniya don yaɗa saƙon Alkur'ani da Sunnah bisa fahimtar Salaf. Shafin yana da amintaccen abun ciki kuma yana ba da dama ga harsuna daban-daban ga Musulmai a duniya baki ɗaya.">
+      Imamu Nafiulmadaniy Da’awatus Salafiyyah is a global initiative to spread the message of the Qur’an and Sunnah upon the understanding of the Salaf. The site features authentic content and offers a multilingual platform for Muslims worldwide.
+    </p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
+</body>
+</html>
+ 
