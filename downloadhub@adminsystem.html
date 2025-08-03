@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Hub & Admin | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="main-nav"></div>
+
+  <header>
+    <h1>Download Hub & Admin System</h1>
+  </header>
+
+  <main>
+    <!-- Download Hub Section -->
+    <section>
+      <h2>📚 Download Hub</h2>
+      <p>Access and download high-quality Islamic resources such as:</p>
+      <ul>
+        <li><a href="#">Qur’an Recitation (Audio)</a></li>
+        <li><a href="#">Sahih Hadith Collections (PDF)</a></li>
+        <li><a href="#">Tafsir Books (eBooks)</a></li>
+        <li><a href="#">Arabic Learning Materials</a></li>
+        <li><a href="#">Children's Islamic Stories</a></li>
+        <li><a href="#">Video Lectures & Series</a></li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- Admin System Section -->
+    <section>
+      <h2>🔐 Admin Control System</h2>
+      <p>This section is restricted to authorized administrators only. From here, admins can:</p>
+      <ul>
+        <li>Upload new content and lectures</li>
+        <li>Manage users and moderators</li>
+        <li>Approve or edit submissions</li>
+        <li>Control homepage and featured posts</li>
+      </ul>
+      <p><strong>Access Admin Panel:</strong> <a href="admin.html">Click here to login</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
