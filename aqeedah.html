@@ -3,77 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqeedah - Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <title>Aqeedah Section | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="lang.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aqeedah.html" class="active">Aqeedah</a></li>
-        <li><a href="tafseer.html">Tafseer</a></li>
-        <li><a href="#" onclick="toggleLanguage()">🌐</a></li>
-      </ul>
-    </nav>
+    <h1 data-i18n="aqeedah_title">Aqeedah Section</h1>
+    <div id="lang-select">
+      <select id="language-picker">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+      </select>
+    </div>
   </header>
 
   <main>
-    <section class="intro">
-      <h1 data-en="Aqeedah Resources" data-ar="موارد العقيدة" data-ha="Kayan Akidah">Aqeedah Resources</h1>
-      <p data-en="Pure Islamic beliefs based on authentic sources." 
-         data-ar="العقائد الإسلامية النقية من مصادر صحيحة."
-         data-ha="Akimar musulunci na gaskiya daga tushe nagari.">
-        Pure Islamic beliefs based on authentic sources.
-      </p>
-    </section>
-
-    <section class="resources">
-      <div class="resource">
-        <h2>PDF: Usul al-Thalatha</h2>
-        <a href="files/usul_thalatha.pdf" download>Download</a>
-      </div>
-
-      <div class="resource">
-        <h2>Audio: Sharh al-Aqeedah al-Wasitiyyah</h2>
-        <audio controls>
-          <source src="files/aqeedah_audio.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
-      <div class="resource">
-        <h2>Video: Belief in Allah</h2>
-        <video width="100%" controls>
-          <source src="files/belief_allah.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <section>
+      <h2 data-i18n="upload_belief_material">Upload of Pure Islamic Beliefs</h2>
+      <p data-i18n="aqeedah_desc">Here you'll find PDF, audio, and video resources explaining authentic Islamic creed (Aqeedah) as understood by the Salaf.</p>
+      <ul class="downloads">
+        <li><a href="#" data-i18n="download_pdf">Download Aqeedah PDF</a></li>
+        <li><a href="#" data-i18n="download_audio">Download Audio</a></li>
+        <li><a href="#" data-i18n="download_video">Download Video</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
-
-  <script>
-    function toggleLanguage() {
-      const elements = document.querySelectorAll('[data-en]');
-      const currentLang = localStorage.getItem('lang') || 'en';
-      let nextLang = 'ar';
-      if (currentLang === 'ar') nextLang = 'ha';
-      else if (currentLang === 'ha') nextLang = 'en';
-      localStorage.setItem('lang', nextLang);
-
-      elements.forEach(el => {
-        el.innerText = el.getAttribute(`data-${nextLang}`);
-      });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      toggleLanguage(); // auto-detect or fallback to local
-    });
-  </script>
 </body>
 </html>
+ 
