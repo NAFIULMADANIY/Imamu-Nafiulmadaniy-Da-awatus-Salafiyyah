@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqeedah | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>📖 Aqeedah Section</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tafsir.html">Tafseer</a>
+      <a href="hadith.html">Hadith</a>
+      <a href="fiqh.html">Fiqh</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Pure Islamic Beliefs According to Salafi Manhaj</h2>
+      <p>Explore core concepts of Aqeedah through verified content.</p>
+    </section>
+
+    <section class="content-grid">
+      <div class="resource">
+        <h3>What is Tawheed?</h3>
+        <a href="/downloads/tawheed.pdf" download>📥 Download PDF</a>
+      </div>
+      <div class="resource">
+        <h3>Shirk Explained</h3>
+        <audio controls>
+          <source src="/audios/shirk-explained.mp3" type="audio/mp3">
+          Your browser does not support audio.
+        </audio>
+      </div>
+      <div class="resource">
+        <h3>Importance of Aqeedah</h3>
+        <video controls width="100%">
+          <source src="/videos/importance-of-aqeedah.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+    </section>
+
+    <section class="language-switch">
+      <label for="language">🌐 Language:</label>
+      <select id="language" onchange="switchLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+        <option value="fr">Français</option>
+        <option value="sw">Swahili</option>
+        <option value="tr">Türkçe</option>
+        <option value="id">Bahasa Indonesia</option>
+      </select>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      alert("Language switching is in progress for: " + lang);
+      // Logic for real translation will go here later
+    }
+  </script>
+</body>
+</html>
