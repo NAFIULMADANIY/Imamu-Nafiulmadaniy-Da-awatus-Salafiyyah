@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Admin Access | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="main-nav"></div>
+
+  <main>
+    <h1>Super Admin Access Page</h1>
+    <p>This page allows super administrators to:</p>
+    <ul>
+      <li>Reset system configuration</li>
+      <li>Upload or remove admin accounts</li>
+      <li>Control user permissions and roles</li>
+    </ul>
+
+    <p><a href="#">Proceed to secure panel &rarr;</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
