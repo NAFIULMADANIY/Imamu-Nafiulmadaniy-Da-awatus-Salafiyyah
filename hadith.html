@@ -1,62 +1,133 @@
+ <!-- Hadith Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hadith | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hadith | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+    <h1>Hadith Section</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hadith.html" class="active">Hadith</a></li>
-        <li><a href="fiqh.html">Fiqh</a></li>
-        <li><a href="family.html">Family</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <select id="languageSelect" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-            <option value="ha">Hausa</option>
-          </select>
-        </li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="fiqh.html">Fiqh</a>
+      <a href="tafsir.html">Tafseer</a>
     </nav>
   </header>
-
   <main>
-    <section class="content" id="hadithContent">
-      <h2 data-en="Hadith of the Day" data-ar="حديث اليوم" data-ha="Hadisin Rana">
-        Hadith of the Day
-      </h2>
-      <p data-en="The Prophet ﷺ said: 'Whoever believes in Allah and the Last Day should speak good or remain silent.'" 
-         data-ar="قال رسول الله ﷺ: 'من كان يؤمن بالله واليوم الآخر فليقل خيرًا أو ليصمت.'" 
-         data-ha="Annabi ﷺ ya ce: 'Duk wanda ya yi imani da Allah da Ranar Lahira, to ya fadi alheri ko ya yi shiru.'">
-        The Prophet ﷺ said: "Whoever believes in Allah and the Last Day should speak good or remain silent."
-      </p>
-    </section>
+    <p>Select a hadith category below:</p>
+    <ul>
+      <li><a href="#">Aqidah</a></li>
+      <li><a href="#">Fiqh rulings</a></li>
+      <li><a href="#">Virtues</a></li>
+    </ul>
+    <div>
+      <h2>Download Hadith Collections</h2>
+      <a href="/downloads/hadith-ar.pdf">Arabic PDF</a> |
+      <a href="/downloads/hadith-en.pdf">English PDF</a> |
+      <a href="/downloads/hadith-ha.pdf">Hausa PDF</a>
+    </div>
   </main>
-
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
+</body>
+</html>
 
-  <script>
-    function changeLanguage() {
-      const selected = document.getElementById("languageSelect").value;
-      const elements = document.querySelectorAll("[data-en]");
-      elements.forEach(el => {
-        el.textContent = el.getAttribute("data-" + selected);
-        if (selected === "ar") {
-          document.body.dir = "rtl";
-        } else {
-          document.body.dir = "ltr";
-        }
-      });
-    }
-  </script>
+<!-- Fiqh Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiqh | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Fiqh Section</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hadith.html">Hadith</a>
+      <a href="tafsir.html">Tafseer</a>
+    </nav>
+  </header>
+  <main>
+    <p>Topics covered include purification, prayer, zakat, fasting, hajj, etc.</p>
+    <div>
+      <h2>Fiqh Resources</h2>
+      <a href="/downloads/fiqh-ar.pdf">Arabic PDF</a> |
+      <a href="/downloads/fiqh-en.pdf">English PDF</a> |
+      <a href="/downloads/fiqh-ha.pdf">Hausa PDF</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
+</body>
+</html>
+
+<!-- Family Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Marriage & Family Guidance</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="fiqh.html">Fiqh</a>
+      <a href="hadith.html">Hadith</a>
+    </nav>
+  </header>
+  <main>
+    <p>Includes: Marriage advice, intimacy, parenting, rights & responsibilities.</p>
+    <div>
+      <h2>Downloadable Resources</h2>
+      <a href="/downloads/family-ar.pdf">Arabic PDF</a> |
+      <a href="/downloads/family-en.pdf">English PDF</a> |
+      <a href="/downloads/family-ha.pdf">Hausa PDF</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
+</body>
+</html>
+
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>About the Da'wah</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hadith.html">Hadith</a>
+      <a href="tafsir.html">Tafseer</a>
+    </nav>
+  </header>
+  <main>
+    <p>
+      Imamu Nafiulmadaniy Da’awatus Salafiyyah is a global initiative to spread the message of the Qur’an and Sunnah upon the understanding of the Salaf. 
+      The site features authentic content and offers a multilingual platform for Muslims worldwide.
+    </p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
 </body>
 </html>
