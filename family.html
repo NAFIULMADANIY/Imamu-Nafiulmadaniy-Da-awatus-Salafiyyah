@@ -1,116 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="styles.css">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Family Life - Imamu Nafiulmadaniy</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
-    header, footer { background-color: #0f5132; color: white; text-align: center; padding: 15px; }
-    nav { background-color: #e0f7e9; text-align: center; padding: 10px; }
-    nav a { margin: 10px; text-decoration: none; color: #0f5132; font-weight: bold; }
-    .section { padding: 20px; max-width: 90%; margin: auto; background: white; border-left: 5px solid #0f5132; border-radius: 8px; margin-top: 20px; }
-  </style>
-</head>
-<body><!-- 🔍 SEARCH BAR -->
-<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchContent()" style="padding:8px; width:90%; margin:10px auto; display:block;">
-
-
-<header>
-  <h1>Family Life</h1>
-  <p>Islamic guidance for couples, parenting, and married life</p>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="hadith.html">Hadith</a>
-  <a href="fiqh.html">Fiqh</a>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="about.html">About</a>
-</nav>
-
-<div class="section">
-  <h2>❤️ Marriage in Islam</h2>
-  <p>Marriage is a Sunnah and a source of tranquility. The Prophet ﷺ said: "Marriage is part of my Sunnah..."</p>
-</div>
-
-<div class="section">
-  <h2>👶 Parenting Tips</h2>
-  <p>Parents are responsible for raising children in accordance with Islamic teachings and love.</p>
-</div>
-
-<footer>
-  <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
-</footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Family Life - Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Married Life Guidance</h1>
+    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="fiqh.html">Fiqh</a>
-      <a href="family.html" class="active">Family</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="about.html">About</a>
-      <select id="languageSelect" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+        <li><a href="family.html" class="active">Family</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="ha">Hausa</option>
+          </select>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="content-en" class="lang-content">
-      <h2>Guidance for Muslim Families</h2>
-      <p>Marriage advice, parenting in Islam, intimacy, and household management based on Sunnah.</p>
-      <ul>
-        <li>Roles and rights of spouses</li>
-        <li>Parenting tips based on Sunnah</li>
-        <li>Intimacy in marriage - modest guidance</li>
-      </ul>
-    </section>
-
-    <section id="content-ar" class="lang-content" style="display:none;">
-      <h2>إرشادات للأسرة المسلمة</h2>
-      <p>نصائح الزواج، التربية الإسلامية، والعلاقات الأسرية وفق السنة.</p>
-      <ul>
-        <li>حقوق وواجبات الأزواج</li>
-        <li>تربية الأطفال على منهج السلف</li>
-        <li>العلاقة الزوجية - إرشادات شرعية</li>
-      </ul>
-    </section>
-
-    <section id="content-ha" class="lang-content" style="display:none;">
-      <h2>Shawarwari ga Iyalan Musulmi</h2>
-      <p>Shawarwari kan aure, tarbiyyar yara, da zaman lafiya cikin aure bisa ga Sunnah.</p>
-      <ul>
-        <li>Hakkoki da nauyin ma'aurata</li>
-        <li>Hanyoyin tarbiyyar yara cikin sauki</li>
-        <li>Dangantakar aure bisa tsari na Musulunci</li>
-      </ul>
+    <section class="content" id="familyContent">
+      <h2 data-en="Islamic Advice for the Family" data-ar="نصيحة إسلامية للأسرة" data-ha="Shawarwari na Musulunci ga Iyali">
+        Islamic Advice for the Family
+      </h2>
+      <p data-en="The best of you are those who are best to their families." 
+         data-ar="خيركم خيركم لأهله." 
+         data-ha="Mafi alherinku shine wanda yafi kyautatawa iyalinsa.">
+        The best of you are those who are best to their families.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah.</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
 
   <script>
     function changeLanguage() {
-      const lang = document.getElementById("languageSelect").value;
-      document.querySelectorAll(".lang-content").forEach(section => section.style.display = "none");
-      document.getElementById("content-" + lang).style.display = "block";
+      const selected = document.getElementById("languageSelect").value;
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + selected);
+        if (selected === "ar") {
+          document.body.dir = "rtl";
+        } else {
+          document.body.dir = "ltr";
+        }
+      });
     }
   </script>
 </body>
