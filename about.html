@@ -1,38 +1,39 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqeedah Section | Imamu Nafiulmadaniy</title>
+  <title>About Us | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="lang.js"></script>
 </head>
 <body>
+  <div id="main-nav"></div>
+
   <header>
-    <h1 data-i18n="aqeedah_title">Aqeedah Section</h1>
-    <div id="lang-select">
-      <select id="language-picker">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
-    </div>
+    <h1>About Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
   </header>
 
   <main>
     <section>
-      <h2 data-i18n="upload_belief_material">Upload of Pure Islamic Beliefs</h2>
-      <p data-i18n="aqeedah_desc">Here you'll find PDF, audio, and video resources explaining authentic Islamic creed (Aqeedah) as understood by the Salaf.</p>
-      <ul class="downloads">
-        <li><a href="#" data-i18n="download_pdf">Download Aqeedah PDF</a></li>
-        <li><a href="#" data-i18n="download_audio">Download Audio</a></li>
-        <li><a href="#" data-i18n="download_video">Download Video</a></li>
-      </ul>
+      <h2>Our Mission and Vision</h2>
+      <p>
+        We aim to spread authentic Islamic knowledge based on the Qur’an and Sunnah, as understood by the Salaf. Our da’wah focuses on education, reform, and guiding Muslims towards correct beliefs and practices.
+      </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
 </body>
 </html>
