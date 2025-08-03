@@ -3,60 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
+  <title>Admin Dashboard | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+    <h1 class="logo">Admin Dashboard</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hadith.html">Hadith</a></li>
-        <li><a href="fiqh.html">Fiqh</a></li>
-        <li><a href="family.html">Family</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li>
-          <select id="languageSelect" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-            <option value="ha">Hausa</option>
-          </select>
-        </li>
+        <li><a href="index.html">← Back to Site</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="content" id="aboutContent">
-      <h2 data-en="About Us" data-ar="من نحن" data-ha="Game da Mu">
-        About Us
-      </h2>
-      <p data-en="This platform was created to share authentic Islamic knowledge in Arabic, English, and Hausa." 
-         data-ar="تم إنشاء هذا الموقع لنشر المعرفة الإسلامية الأصيلة بالعربية والإنجليزية والهوسا." 
-         data-ha="An kirkiri wannan shafin ne domin yada sahihan ilimin addinin Musulunci cikin Larabci, Turanci da Hausa.">
-        This platform was created to share authentic Islamic knowledge in Arabic, English, and Hausa.
-      </p>
+    <section class="content" id="dashboardContent">
+      <h2>Welcome, Admin</h2>
+      <p>This is your dashboard. You will be able to manage content here soon, In sha Allah.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
-
-  <script>
-    function changeLanguage() {
-      const selected = document.getElementById("languageSelect").value;
-      const elements = document.querySelectorAll("[data-en]");
-      elements.forEach(el => {
-        el.textContent = el.getAttribute("data-" + selected);
-        if (selected === "ar") {
-          document.body.dir = "rtl";
-        } else {
-          document.body.dir = "ltr";
-        }
-      });
-    }
-  </script>
 </body>
 </html>
