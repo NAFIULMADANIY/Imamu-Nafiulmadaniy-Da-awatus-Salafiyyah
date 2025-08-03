@@ -3,42 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="admin_login">Admin Login - Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <title>Admin Login | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="language.js" defer></script>
 </head>
 <body>
+  <div id="main-nav"></div>
+
   <header>
-    <h1 data-i18n="admin_login">Admin Login</h1>
-    <nav>
-      <select id="language-selector">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
-    </nav>
+    <h1>Admin Dashboard Login</h1>
   </header>
 
   <main>
-    <section class="login-section">
-      <form id="login-form">
-        <label for="username" data-i18n="username">Username:</label>
-        <input type="text" id="username" name="username" required />
+    <form action="/dashboard.html" method="POST" class="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
 
-        <label for="password" data-i18n="password">Password:</label>
-        <input type="password" id="password" name="password" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
 
-        <label for="2fa-code" data-i18n="2fa_code">2FA Code:</label>
-        <input type="text" id="2fa-code" name="2fa-code" required />
-
-        <button type="submit" data-i18n="login_btn">Login</button>
-      </form>
-      <p data-i18n="restricted_note">Access is restricted to approved administrators only.</p>
-    </section>
+      <button type="submit">Login</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-nav").innerHTML = data;
+        });
+    });
+  </script>
 </body>
 </html>
