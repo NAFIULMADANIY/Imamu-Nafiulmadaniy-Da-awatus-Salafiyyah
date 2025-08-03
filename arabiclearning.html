@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arabic Learning - Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Arabic Learning</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aqeedah.html">Aqeedah</a></li>
+        <li><a href="tafsir.html">Tafseer</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+        <li><a href="fatwa.html">Fatwa</a></li>
+        <li><a href="arabic_learning.html" class="active">Arabic Learning</a></li>
+      </ul>
+    </nav>
+    <div class="language-select">
+      <label for="language">Language:</label>
+      <select id="language" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Learn Arabic at Your Level</h2>
+      <p>Beginner, intermediate, and advanced Arabic lessons with Salafi-based vocabulary and Islamic context.</p>
+    </section>
+
+    <section>
+      <h3>Interactive Lessons</h3>
+      <ul>
+        <li><a href="#">Level 1 - Alphabet & Sounds</a></li>
+        <li><a href="#">Level 2 - Basic Words & Sentences</a></li>
+        <li><a href="#">Level 3 - Grammar & Quranic Language</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Quizzes and Assignments</h3>
+      <p>Track your progress and submit your answers for review. Supervised by approved admins.</p>
+    </section>
+
+    <section>
+      <h3>Resources</h3>
+      <p>Downloadable PDFs, practice sheets, and audio pronunciation guides.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      localStorage.setItem('preferredLang', lang);
+      // Reload content based on language selection (manual logic can be added here)
+      alert("Language switched to: " + lang);
+    }
+
+    window.onload = () => {
+      const preferred = localStorage.getItem('preferredLang') || 'en';
+      document.getElementById('language').value = preferred;
+    };
+  </script>
+</body>
+</html>
