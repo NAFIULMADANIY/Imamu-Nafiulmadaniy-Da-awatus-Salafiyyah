@@ -1,130 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="styles.css">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fiqh Section - Imamu Nafiulmadaniy</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f9f6; }
-    header, footer { background-color: #0f5132; color: white; padding: 15px; text-align: center; }
-    nav { background-color: #e0f7e9; text-align: center; padding: 10px; }
-    nav a { margin: 10px; text-decoration: none; color: #0f5132; font-weight: bold; }
-    h2 { text-align: center; color: #0f5132; }
-    .ruling { margin: 20px auto; width: 90%; background: white; padding: 15px; border-radius: 8px; border-left: 5px solid #0f5132; }
-  </style>
-</head>
-<body><!-- 🔍 SEARCH BAR -->
-<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchContent()" style="padding:8px; width:90%; margin:10px auto; display:block;">
-
-
-<header>
-  <h1>Fiqh Section</h1>
-  <p>Islamic rulings based on the Qur’an and Sunnah</p>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="hadith.html">Hadith</a>
-  <a href="family.html">Family</a>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="about.html">About</a>
-</nav>
-
-<h2>Practical Rulings (Fiqh)</h2>
-
-<div class="ruling">
-  <h3>🧼 Taharah (Purification)</h3>
-  <p>Purification is a condition for prayer. Wudu, ghusl, and tayammum are part of this.</p>
-</div>
-
-<div class="ruling">
-  <h3>🕌 Salah (Prayer)</h3>
-  <p>The five daily prayers are mandatory. Each prayer has specific timing and conditions.</p>
-</div>
-
-<div class="ruling">
-  <h3>📦 Zakat</h3>
-  <p>Zakat purifies wealth. It is obligatory on specific wealth after a full lunar year.</p>
-</div>
-
-<footer>
-  <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
-</footer>
-
-</body>
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fiqh - Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <title>Fiqh | Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Fiqh Section</h1>
+    <h1 class="logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="hadith.html">Hadith</a>
-      <a href="fiqh.html" class="active">Fiqh</a>
-      <a href="family.html">Family</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="about.html">About</a>
-      <select id="languageSelect" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html" class="active">Fiqh</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="ha">Hausa</option>
+          </select>
+        </li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="content-en" class="lang-content">
-      <h2>Islamic Jurisprudence (Fiqh)</h2>
-      <p>Find categorized fatawa and practical Islamic rulings from trusted Salafi scholars.</p>
-      <ul>
-        <li><strong>Prayer (Salah)</strong> – rulings on purification, timing, congregation</li>
-        <li><strong>Fasting (Sawm)</strong> – Ramadan, voluntary fasts, invalidators</li>
-        <li><strong>Charity (Zakat)</strong> – eligible recipients, calculations</li>
-        <li><strong>Hajj & Umrah</strong> – step-by-step rulings, prohibited acts</li>
-      </ul>
-    </section>
-
-    <section id="content-ar" class="lang-content" style="display:none;">
-      <h2>الفقه الإسلامي</h2>
-      <p>أحكام عملية مصنفة مقدمة من علماء السلف الموثوقين.</p>
-      <ul>
-        <li><strong>الصلاة</strong> – الطهارة، الوقت، الجماعة</li>
-        <li><strong>الصيام</strong> – رمضان، النوافل، المفطرات</li>
-        <li><strong>الزكاة</strong> – المستحقون، الحساب</li>
-        <li><strong>الحج والعمرة</strong> – الأحكام التفصيلية، المحظورات</li>
-      </ul>
-    </section>
-
-    <section id="content-ha" class="lang-content" style="display:none;">
-      <h2>Ilmin Fiqhu</h2>
-      <p>Ka samu fatawowin Salafiyyu na gaskiya bisa al'amuran yau da kullum.</p>
-      <ul>
-        <li><strong>Sallah</strong> – tsarki, lokaci, jam’i</li>
-        <li><strong>Azumi</strong> – Ramadan, nafilah, masu karya azumi</li>
-        <li><strong>Zakka</strong> – wadanda suka cancanta, lissafi</li>
-        <li><strong>Hajj da Umrah</strong> – matakai da dokokin tafiya</li>
-      </ul>
+    <section class="content" id="fiqhContent">
+      <h2 data-en="Fiqh Ruling" data-ar="مسألة فقهية" data-ha="Hukunce-Hukuncen Fiqhu">
+        Fiqh Ruling
+      </h2>
+      <p data-en="Performing wudhu (ablution) is required before every prayer." 
+         data-ar="الوضوء واجب قبل كل صلاة." 
+         data-ha="Yin alwala wajibi ne kafin kowane sallah.">
+        Performing wudhu (ablution) is required before every prayer.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
 
   <script>
     function changeLanguage() {
-      const lang = document.getElementById("languageSelect").value;
-      document.querySelectorAll(".lang-content").forEach(section => section.style.display = "none");
-      document.getElementById("content-" + lang).style.display = "block";
+      const selected = document.getElementById("languageSelect").value;
+      const elements = document.querySelectorAll("[data-en]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + selected);
+        if (selected === "ar") {
+          document.body.dir = "rtl";
+        } else {
+          document.body.dir = "ltr";
+        }
+      });
     }
   </script>
 </body>
-</html>
 </html>
