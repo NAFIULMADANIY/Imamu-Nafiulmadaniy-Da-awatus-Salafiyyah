@@ -1,95 +1,56 @@
-<!-- Tafsir Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tafsir | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="lang.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tafseer & Fatwa - Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      location.reload();
+    }
+    function detectLanguage() {
+      const savedLang = localStorage.getItem('lang');
+      const userLang = savedLang || navigator.language.slice(0, 2);
+      document.documentElement.lang = userLang;
+    }
+    window.onload = detectLanguage;
+  </script>
 </head>
 <body>
   <header>
-    <h1 data-en="Tafsir Section" data-ar="قسم التفسير" data-ha="Sashen Tafsiri">Tafsir Section</h1>
-    <div class="lang-select">
-      <label for="language">🌐</label>
-      <select id="language">
+    <h1>Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aqeedah.html">Aqeedah</a>
+      <a href="tafsir.html">Tafseer</a>
+      <a href="fatwa.html">Fatwa</a>
+      <select onchange="setLanguage(this.value)">
         <option value="en">English</option>
         <option value="ar">العربية</option>
         <option value="ha">Hausa</option>
       </select>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="hadith.html">Hadith</a>
-      <a href="fiqh.html">Fiqh</a>
     </nav>
   </header>
-  <main>
-    <p data-en="Explore Quran Tafsir in different languages."
-       data-ar="اكتشف تفسير القرآن بلغات مختلفة"
-       data-ha="Binciki Tafsirin Al-Qur'ani da dama">
-       Explore Quran Tafsir in different languages.
-    </p>
-    <ul>
-      <li><a href="#">Tafsir Ibn Kathir</a></li>
-      <li><a href="#">Tafsir Al-Sa'di</a></li>
-      <li><a href="#">Tafsir Al-Jalalayn</a></li>
-    </ul>
-    <div>
-      <h2 data-en="Download Tafsir PDFs" data-ar="تحميل ملفات التفسير" data-ha="Zazzage PDFs na Tafsiri">Download Tafsir PDFs</h2>
-      <a href="/downloads/tafsir-ar.pdf">Arabic PDF</a> |
-      <a href="/downloads/tafsir-en.pdf">English PDF</a> |
-      <a href="/downloads/tafsir-ha.pdf">Hausa PDF</a>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
-  </footer>
-</body>
-</html>
 
-<!-- Dashboard Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="lang.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1 data-en="Admin Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard na Gudanarwa">Admin Dashboard</h1>
-    <div class="lang-select">
-      <label for="language">🌐</label>
-      <select id="language">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
   <main>
-    <p data-en="Welcome, admin! Manage site content and downloads."
-       data-ar="مرحبًا، أيها المسؤول! قم بإدارة محتوى الموقع والتنزيلات."
-       data-ha="Barka da zuwa, admin! Sarrafa abubuwan cikin shafin da saukewa.">
-       Welcome, admin! Manage site content and downloads.
-    </p>
-    <ul>
-      <li><a href="#">Add Hadith</a></li>
-      <li><a href="#">Upload PDFs</a></li>
-      <li><a href="#">Edit Sections</a></li>
-    </ul>
+    <section id="tafsir">
+      <h2>Tafseer Section</h2>
+      <p>Authentic Qur’anic commentary from recognized Salafi scholars. Materials available in PDF, audio, and video formats with search and category filters.</p>
+      <!-- Dynamic Tafsir content to be added here -->
+    </section>
+
+    <section id="fatwa">
+      <h2>Fatwa Page</h2>
+      <p>Verified and categorized fatwas, searchable by topic and language. Designed for clarity and reliability based on Quran and Sunnah.</p>
+      <!-- Fatwa filter and list placeholder -->
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
   </footer>
 </body>
 </html>
-      
+ 
