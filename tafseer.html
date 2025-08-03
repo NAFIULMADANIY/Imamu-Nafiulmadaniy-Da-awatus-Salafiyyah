@@ -1,62 +1,95 @@
+<!-- Tafsir Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tafseer | Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <title>Tafsir | Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    const userLang = localStorage.getItem("lang") || navigator.language.slice(0, 2) || "en";
-    document.documentElement.lang = userLang;
-  </script>
+  <script src="lang.js" defer></script>
 </head>
 <body>
   <header>
-    <h1 class="logo">Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
+    <h1 data-en="Tafsir Section" data-ar="قسم التفسير" data-ha="Sashen Tafsiri">Tafsir Section</h1>
+    <div class="lang-select">
+      <label for="language">🌐</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+      </select>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aqeedah.html">Aqeedah</a></li>
-        <li><a href="tafseer.html" class="active">Tafseer</a></li>
-        <li><a href="hadith.html">Hadith</a></li>
-        <li><a href="fiqh.html">Fiqh</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="hadith.html">Hadith</a>
+      <a href="fiqh.html">Fiqh</a>
     </nav>
   </header>
-
   <main>
-    <section class="page-intro">
-      <h2 data-lang="en">Authentic Qur’anic Tafseer</h2>
-      <h2 data-lang="ar">تفسير القرآن الكريم الصحيح</h2>
-      <h2 data-lang="ha">Fassarar Alkur’ani Mai Inganci</h2>
-      <p data-lang="en">Explore trusted explanations by Salafi scholars, including audio and PDF downloads.</p>
-      <p data-lang="ar">استكشف تفسيرات موثوقة من علماء السلف، بما في ذلك التنزيلات الصوتية وPDF.</p>
-      <p data-lang="ha">Karanta Fassarar Qur’ani daga malamai Salafiyawa tare da sauke sauti da PDF.</p>
-    </section>
-
-    <section class="downloads">
-      <h3 data-lang="en">Available Tafseer Files</h3>
-      <h3 data-lang="ar">ملفات التفسير المتاحة</h3>
-      <h3 data-lang="ha">Fayilolin Tafseer da Ake da Su</h3>
-      <ul>
-        <li><a href="/downloads/tafsir_ibnkathir.pdf" download>📄 Ibn Kathir PDF</a></li>
-        <li><a href="/downloads/tafsir_audio.mp3" download>🔊 Audio Tafseer - Shaykh AbdulMuhsin</a></li>
-      </ul>
-    </section>
+    <p data-en="Explore Quran Tafsir in different languages."
+       data-ar="اكتشف تفسير القرآن بلغات مختلفة"
+       data-ha="Binciki Tafsirin Al-Qur'ani da dama">
+       Explore Quran Tafsir in different languages.
+    </p>
+    <ul>
+      <li><a href="#">Tafsir Ibn Kathir</a></li>
+      <li><a href="#">Tafsir Al-Sa'di</a></li>
+      <li><a href="#">Tafsir Al-Jalalayn</a></li>
+    </ul>
+    <div>
+      <h2 data-en="Download Tafsir PDFs" data-ar="تحميل ملفات التفسير" data-ha="Zazzage PDFs na Tafsiri">Download Tafsir PDFs</h2>
+      <a href="/downloads/tafsir-ar.pdf">Arabic PDF</a> |
+      <a href="/downloads/tafsir-en.pdf">English PDF</a> |
+      <a href="/downloads/tafsir-ha.pdf">Hausa PDF</a>
+    </div>
   </main>
-
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All Rights Reserved.</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
   </footer>
-
-  <script>
-    // Multi-language auto toggle based on saved user selection or browser
-    document.addEventListener("DOMContentLoaded", () => {
-      const lang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
-      document.querySelectorAll("[data-lang]").forEach(el => {
-        el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
-      });
-    });
-  </script>
 </body>
 </html>
+
+<!-- Dashboard Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="lang.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-en="Admin Dashboard" data-ar="لوحة التحكم" data-ha="Dashboard na Gudanarwa">Admin Dashboard</h1>
+    <div class="lang-select">
+      <label for="language">🌐</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ha">Hausa</option>
+      </select>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <p data-en="Welcome, admin! Manage site content and downloads."
+       data-ar="مرحبًا، أيها المسؤول! قم بإدارة محتوى الموقع والتنزيلات."
+       data-ha="Barka da zuwa, admin! Sarrafa abubuwan cikin shafin da saukewa.">
+       Welcome, admin! Manage site content and downloads.
+    </p>
+    <ul>
+      <li><a href="#">Add Hadith</a></li>
+      <li><a href="#">Upload PDFs</a></li>
+      <li><a href="#">Edit Sections</a></li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah</p>
+  </footer>
+</body>
+</html>
+      
