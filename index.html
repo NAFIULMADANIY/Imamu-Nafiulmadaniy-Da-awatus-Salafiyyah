@@ -1,64 +1,67 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <title>Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    function switchLanguage(lang) {
-      const sections = document.querySelectorAll('[data-lang]');
-      sections.forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      switchLanguage('en'); // default language
-    });
-  </script>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
-      <select onchange="switchLanguage(this.value)">
+    <h1 class="site-logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aqeedah.html">Aqeedah</a></li>
+        <li><a href="tafseer.html">Tafseer</a></li>
+        <li><a href="hadith.html">Hadith</a></li>
+        <li><a href="fiqh.html">Fiqh</a></li>
+        <li><a href="fatwa.html">Fatwa</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switcher">
+      <select id="languageSelect">
         <option value="en">English</option>
         <option value="ar">العربية</option>
         <option value="ha">Hausa</option>
       </select>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hadith.html">Hadith</a></li>
-        <li><a href="fiqh.html">Fiqh</a></li>
-        <li><a href="family.html">Family</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main class="container">
-    <section data-lang="en">
-      <h2>Welcome</h2>
-      <p>This platform is dedicated to the spread of authentic Islamic knowledge through the path of the Salaf, in English and other languages.</p>
+  <main>
+    <section class="intro">
+      <h2>Welcome to Imamu Nafiulmadaniy Da'awatus Salafiyyah</h2>
+      <p>Spreading the authentic message of Islam based on the Qur’an and Sunnah with the understanding of the Salaf.</p>
     </section>
 
-    <section data-lang="ar" dir="rtl" style="display:none;">
-      <h2>مرحبًا بكم</h2>
-      <p>هذا الموقع مخصص لنشر العلم الإسلامي الصحيح على منهج السلف، باللغة العربية وغيرها.</p>
+    <section class="daily">
+      <h3>Daily Ayah</h3>
+      <blockquote id="ayah">"Indeed, prayer prohibits immorality and wrongdoing..." (Qur’an 29:45)</blockquote>
+
+      <h3>Daily Hadith</h3>
+      <blockquote id="hadith">"The best among you are those who learn the Qur’an and teach it." – Bukhari</blockquote>
     </section>
 
-    <section data-lang="ha" style="display:none;">
-      <h2>Barka da Zuwa</h2>
-      <p>Wannan dandali yana da’awar yada ilimin Musulunci na gaskiya a bisa tafarkin Salaf a harshen Hausa da sauran harsuna.</p>
+    <section class="video-intro">
+      <h3>Intro Video</h3>
+      <video controls width="100%">
+        <source src="video/intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById("languageSelect").addEventListener("change", function() {
+      const lang = this.value;
+      alert("Language switched to: " + lang);
+      // Future: Load actual translations based on lang
+    });
+  </script>
 </body>
 </html>
