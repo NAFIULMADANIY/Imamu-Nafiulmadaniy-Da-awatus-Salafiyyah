@@ -2,38 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Imamu Nafiulmadaniy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <div id="main-nav"></div>
+  <!-- Load Navigation -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
-  <header>
-    <h1>About Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
-  </header>
-
-  <main>
+  <main class="content">
     <section>
-      <h2>Our Mission and Vision</h2>
+      <h1>📖 About This Da’wah Project</h1>
       <p>
-        We aim to spread authentic Islamic knowledge based on the Qur’an and Sunnah, as understood by the Salaf. Our da’wah focuses on education, reform, and guiding Muslims towards correct beliefs and practices.
+        Welcome to <strong>Imamu Nafiulmadaniy Da’awatus Salafiyyah</strong> — a digital da’wah platform aimed at spreading authentic Islamic teachings to a global audience in Arabic, English, and Hausa.
+      </p>
+
+      <ul>
+        <li><strong>🌍 Vision:</strong> To make authentic Islamic knowledge accessible to every Muslim regardless of their location or language.</li>
+        <li><strong>📚 Methodology:</strong> Following the path of the righteous predecessors (Manhaj as-Salaf).</li>
+        <li><strong>🔒 Security:</strong> Fully protected with AI tools, 2FA, and ethical hacking support.</li>
+        <li><strong>🛠️ Built by:</strong> Nafi’u Aliyu Adam and team — with support from Imamu Nafiulmadaniy and Hafsat Muhammad Abubakar.</li>
+      </ul>
+
+      <p>
+        This website is part of a long-term legacy effort to preserve Islamic knowledge and protect Muslim families spiritually and digitally.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-nav").innerHTML = data;
-        });
-    });
-  </script>
 </body>
 </html>
