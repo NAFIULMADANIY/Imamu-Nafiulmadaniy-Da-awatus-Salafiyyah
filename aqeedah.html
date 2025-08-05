@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aqeedah | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Aqeedah | Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/lang.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
 </head>
 <body>
-  <div id="main-nav"></div>
+  <div id="navbar"></div>
 
-  <header>
-    <h1>Aqeedah Section</h1>
-  </header>
+  <main class="content-section">
+    <h1 data-lang="en">Aqeedah (Creed)</h1>
+    <h1 data-lang="ar">العقيدة</h1>
+    <h1 data-lang="ha">Aƙeeda</h1>
 
-  <main>
-    <section>
-      <h2>Authentic Islamic Beliefs</h2>
-      <p>Resources explaining the correct Islamic creed (Aqeedah) based on the teachings of the Salaf.</p>
-      <ul class="downloads">
-        <li><a href="#">Download Aqeedah PDF</a></li>
-        <li><a href="#">Download Audio Lessons</a></li>
-        <li><a href="#">Download Videos</a></li>
-      </ul>
-    </section>
+    <p data-lang="en">
+      This section provides authentic teachings on Islamic belief (Aqeedah) based on the understanding of the righteous predecessors (Salaf).
+    </p>
+    <p data-lang="ar">
+      يعرض هذا القسم تعاليم العقيدة الإسلامية الصحيحة على فهم السلف الصالح.
+    </p>
+    <p data-lang="ha">
+      Wannan ɓangare yana gabatar da koyarwar gaskiya ta Aqeedah bisa fahimtar Salafus-Salih.
+    </p>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-nav").innerHTML = data;
-        });
-    });
-  </script>
+  <div id="footer"></div>
 </body>
 </html>
