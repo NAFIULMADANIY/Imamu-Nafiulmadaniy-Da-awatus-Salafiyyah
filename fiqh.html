@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fiqh Section | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiqh - Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <!-- Dynamic Navigation Placeholder -->
-  <div id="main-nav"></div>
+  <!-- Load Navigation -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
-  <header>
-    <h1>Fiqh Section</h1>
-  </header>
-
-  <main>
+  <main class="content">
     <section>
-      <h2>Understanding Islamic Jurisprudence</h2>
-      <p>Download educational materials related to the different schools of thought in Fiqh, based on the Qur’an and Sunnah.</p>
-      <ul class="downloads">
-        <li><a href="#">Download Fiqh PDF</a></li>
-        <li><a href="#">Download Audio</a></li>
-        <li><a href="#">Download Video</a></li>
-      </ul>
+      <h1>📚 Fiqh Section</h1>
+      <p>This section will provide rich Islamic jurisprudence (Fiqh) knowledge, based on Qur’an, Sunnah, and the understanding of the Salaf.</p>
+
+      <div class="language-switch">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ar')">العربية</button>
+        <button onclick="switchLanguage('ha')">Hausa</button>
+      </div>
+
+      <!-- Placeholder content -->
+      <article>
+        <h2>Sample Fiqh Topic (English)</h2>
+        <p>What breaks wudu? Understanding the conditions of purification in Islam.</p>
+      </article>
+
+      <article>
+        <h2 dir="rtl">موضوع فقهي نموذجي (بالعربية)</h2>
+        <p dir="rtl">ما الذي ينقض الوضوء؟ فهم شروط الطهارة في الإسلام.</p>
+      </article>
+
+      <article>
+        <h2>Misalin Darasin Fiqhu (Hausa)</h2>
+        <p>Me ke karya alwala? Fahimtar sharuddan tsarki a Musulunci.</p>
+      </article>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
   </footer>
-
-  <!-- Load nav.html using JavaScript -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-nav").innerHTML = data;
-        });
-    });
-  </script>
 </body>
 </html>
