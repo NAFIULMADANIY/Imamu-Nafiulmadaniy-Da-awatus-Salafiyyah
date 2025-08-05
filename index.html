@@ -3,73 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imamu Nafiulmadaniy Da'awatus Salafiyyah</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- ✅ NAV HOLDER -->
-  <div id="main-nav"></div>
-
   <header>
-    <h1 class="site-logo">Imamu Nafiulmadaniy Da'awatus Salafiyyah</h1>
-
-    <!-- ❌ Removed old hardcoded nav here -->
-
-    <div class="lang-switcher">
-      <select id="languageSelect">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ha">Hausa</option>
-      </select>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Da’wah Logo" />
+      <div class="site-name">
+        <h1>Imamu Nafiulmadaniy</h1>
+        <p>Da’awatus Salafiyyah</p>
+      </div>
     </div>
+    <nav id="navbar"></nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Welcome to Imamu Nafiulmadaniy Da'awatus Salafiyyah</h2>
-      <p>Spreading the authentic message of Islam based on the Qur’an and Sunnah with the understanding of the Salaf.</p>
+    <section class="hero">
+      <h2>Welcome to Imamu Nafiulmadaniy Da’awatus Salafiyyah</h2>
+      <p>A multilingual platform for authentic Islamic knowledge, built on the methodology of the Salaf.</p>
     </section>
 
-    <section class="daily">
-      <h3>Daily Ayah</h3>
-      <blockquote id="ayah">"Indeed, prayer prohibits immorality and wrongdoing..." (Qur’an 29:45)</blockquote>
-
-      <h3>Daily Hadith</h3>
-      <blockquote id="hadith">"The best among you are those who learn the Qur’an and teach it." – Bukhari</blockquote>
-    </section>
-
-    <section class="video-intro">
-      <h3>Intro Video</h3>
-      <video controls width="100%">
-        <source src="video/intro.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section class="features">
+      <div class="feature">
+        <h3>Aqeedah</h3>
+        <p>Pure creed based on Qur’an and Sunnah</p>
+      </div>
+      <div class="feature">
+        <h3>Tafseer</h3>
+        <p>Authentic interpretation of the Qur’an</p>
+      </div>
+      <div class="feature">
+        <h3>Hadith</h3>
+        <p>Verified Hadith collections and analysis</p>
+      </div>
+      <div class="feature">
+        <h3>Arabic Learning</h3>
+        <p>Courses from beginner to advanced with submission</p>
+      </div>
+      <div class="feature">
+        <h3>Children’s Section</h3>
+        <p>Games and quizzes for kids to learn Islam</p>
+      </div>
+      <div class="feature">
+        <h3>Marriage Guidance</h3>
+        <p>Advice and rulings for couples</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da'awatus Salafiyyah. All rights reserved.</p>
-  </footer>
-
-  <!-- ✅ Script for Language Switching -->
-  <script>
-    document.getElementById("languageSelect").addEventListener("change", function() {
-      const lang = this.value;
-      alert("Language switched to: " + lang);
-      // Future: Load actual translations based on lang
-    });
-  </script>
-
-  <!-- ✅ Script to Load nav.html -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-nav").innerHTML = data;
-        });
-    });
-  </script>
+  <footer id="footer"></footer>
 </body>
 </html>
