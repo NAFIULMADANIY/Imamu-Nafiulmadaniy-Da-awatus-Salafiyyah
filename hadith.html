@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hadith Section | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hadith - Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <!-- Navigation will be loaded here -->
-  <div id="main-nav"></div>
+  <!-- Load Navigation -->
+  <div id="navbar"></div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
-  <header>
-    <h1>Hadith Section</h1>
-  </header>
-
-  <main>
+  <main class="content">
     <section>
-      <h2>Authentic Hadith Collections</h2>
-      <p>Explore PDF, audio, and video materials of Sahih Ahadith from the Prophet Muhammad ﷺ.</p>
-      <ul class="downloads">
-        <li><a href="#">Download Hadith PDF</a></li>
-        <li><a href="#">Download Audio</a></li>
-        <li><a href="#">Download Video</a></li>
-      </ul>
+      <h1>📖 Hadith Section</h1>
+      <p>Welcome to the Hadith section of Imamu Nafiulmadaniy Da’awatus Salafiyyah.</p>
+      <p>This page will soon contain a collection of authentic hadiths based on topics like prayer, fasting, belief, family, and more.</p>
+
+      <div class="language-switch">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ar')">العربية</button>
+        <button onclick="switchLanguage('ha')">Hausa</button>
+      </div>
+
+      <!-- Placeholder hadith content -->
+      <article>
+        <h2>Sample Hadith (English)</h2>
+        <blockquote>
+          “Actions are judged by intentions.” – Sahih Bukhari & Muslim
+        </blockquote>
+      </article>
+
+      <article>
+        <h2 dir="rtl">حديث نموذجي (بالعربية)</h2>
+        <blockquote dir="rtl">
+          "إنما الأعمال بالنيات" – صحيح البخاري ومسلم
+        </blockquote>
+      </article>
+
+      <article>
+        <h2>Misali Hadithi (Hausa)</h2>
+        <blockquote>
+          "Ayyuka na bisa niyya ne kawai." – Bukhari & Muslim
+        </blockquote>
+      </article>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
   </footer>
-
-  <!-- JavaScript to load nav.html -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("main-nav").innerHTML = data;
-        });
-    });
-  </script>
 </body>
 </html>
