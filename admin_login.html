@@ -1,33 +1,24 @@
- <!-- admin_login.html -->
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Login | Imamu Nafiulmadaniy</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Admin / Superadmin Login</h2>
-    <form id="adminLoginForm">
-      <label for="email">Email</label>
-      <input type="email" id="email" required />
-
-      <label for="password">Password</label>
-      <input type="password" id="password" required />
-
-      <label for="role">Login As</label>
-      <select id="role" required>
-        <option value="admin">Admin</option>
-        <option value="superadmin">Superadmin</option>
-      </select>
-
-      <button type="submit">Login</button>
-    </form>
-    <p id="loginStatus"></p>
-  </div>
-
-  <script src="auth.js"></script>
+  <div id="nav-placeholder"></div>
+  <h2>Admin Login</h2>
+  <form>
+    <label>Username:</label><br>
+    <input type="text" placeholder="Enter username"><br><br>
+    <label>Password:</label><br>
+    <input type="password" placeholder="Enter password"><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <footer>
+    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
+  </footer>
+  <script src="nav.js" defer></script>
 </body>
 </html>
