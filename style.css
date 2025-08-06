@@ -89,3 +89,28 @@ footer {
   text-align: center;
   padding: 10px 20px;
 }
+.prayer-times {
+  background-color: #f0f8ff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.prayer-times h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+.prayer-times ul {
+  list-style: none;
+  padding: 0;
+}
+.prayer-times li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.prayer-note {
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}
