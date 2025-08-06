@@ -1,50 +1,29 @@
+<!-- /admin/dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download Center – Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Welcome to the Admin Dashboard</h1>
+  <p>This page is only accessible to logged-in admins.</p>
 
-  <!-- Navigation Placeholder -->
-  <div id="nav-placeholder"></div>
-  <script src="nav.js" defer></script>
+  <button onclick="logout()">Logout</button>
 
-  <!-- Page Content -->
-  <main class="content">
-    <section class="section">
-      <h1>📥 Download Center</h1>
-      <p>Download verified Islamic resources for personal learning and da’wah.</p>
+  <script>
+    const user = sessionStorage.getItem("loggedInUser");
 
-      <h2>📚 Books (PDF)</h2>
-      <ul>
-        <li><a href="#">The Fundamentals of Tawheed – Dr. Bilal Philips</a></li>
-        <li><a href="#">Riyadh as-Salihin – Imam Nawawi</a></li>
-        <li><a href="#">Fiqh-us-Sunnah – Sayyid Sabiq</a></li>
-      </ul>
+    if (!user || !["admin@example.com", "superadmin@example.com"].includes(user)) {
+      alert("Unauthorized access. Redirecting...");
+      window.location.href = "login.html";
+    }
 
-      <h2>🎧 Audio Lectures</h2>
-      <ul>
-        <li><a href="#">Explanation of Aqeedah – Ustadh XYZ</a></li>
-        <li><a href="#">Tafseer of Surah Al-Fatiha – Sheikh XYZ</a></li>
-      </ul>
-
-      <h2>🖼️ Posters & Infographics</h2>
-      <ul>
-        <li><a href="#">Daily Adhkar Poster</a></li>
-        <li><a href="#">Islamic Manners Infographic</a></li>
-      </ul>
-
-      <p>If you have resources to share with the ummah, kindly <a href="#">submit them here</a>.</p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
-  </footer>
-
+    function logout() {
+      sessionStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
