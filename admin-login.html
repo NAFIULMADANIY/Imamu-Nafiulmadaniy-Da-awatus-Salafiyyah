@@ -1,23 +1,33 @@
-// auth.js
-document.getElementById('adminLoginForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+ <!-- admin_login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login | Imamu Nafiulmadaniy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin / Superadmin Login</h2>
+    <form id="adminLoginForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
 
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
-  const role = document.getElementById('role').value;
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
 
-  // Dummy credentials – replace with real backend later
-  const superadminEmail = "fidaakaabiywaummiyaarasulallah@gmail.com";
-  const superadminPassword = "superadmin123";
-  const adminEmail = "admin@example.com";
-  const adminPassword = "admin123";
+      <label for="role">Login As</label>
+      <select id="role" required>
+        <option value="admin">Admin</option>
+        <option value="superadmin">Superadmin</option>
+      </select>
 
-  if (role === "superadmin" && email === superadminEmail && password === superadminPassword) {
-    window.location.href = "superadmin_dashboard.html";
-  } else if (role === "admin" && email === adminEmail && password === adminPassword) {
-    window.location.href = "admin_dashboard.html";
-  } else {
-    document.getElementById("loginStatus").textContent = "Invalid login credentials.";
-  }
-});
- 
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginStatus"></p>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
