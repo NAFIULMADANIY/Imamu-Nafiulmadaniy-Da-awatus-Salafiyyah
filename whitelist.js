@@ -1,7 +1,7 @@
 // whitelist.js
 
 const WHITELISTED_USERS = [
-  "admin@example.com",
-  "superadmin@example.com"
+  "naliyuadam@gmail.com",
+  "fidaakaabiywaummiyaarasulallah@gmail.com"
 ];
 whitelist.js
