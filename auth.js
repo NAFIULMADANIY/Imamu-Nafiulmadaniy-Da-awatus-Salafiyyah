@@ -1,4 +1,3 @@
-
 // auth.js
 
 const ADMIN_CREDENTIALS = {
