@@ -1,0 +1,29 @@
+<!-- /admin/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Admin Dashboard</h1>
+  <p>This page is only accessible to logged-in admins.</p>
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    const user = sessionStorage.getItem("loggedInUser");
+
+    if (!user || !["admin@example.com", "superadmin@example.com"].includes(user)) {
+      alert("Unauthorized access. Redirecting...");
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      sessionStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
