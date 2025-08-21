@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+emaillCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -85,3 +85,14 @@
       }
 
       if (email === superadminCredentials.email && password === superadminCredentials.password
+      ) {
+        // Save session
+        sessionStorage.setItem("superadmin", "true");
+        window.location.href = "superadmin-dashboard.html";
+      } else {
+        errorMsg.textContent = "Invalid email or password.";
+      }
+    });
+  </script>
+</body>
+</html>
