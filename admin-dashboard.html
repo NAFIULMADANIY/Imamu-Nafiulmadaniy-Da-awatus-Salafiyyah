@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 2rem;
+    }
+    h1 {
+      color: #0066cc;
+    }
+    .logout-btn {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .logout-btn:hover {
+      background-color: #990000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome, Admin</h1>
+  <p>This is your dashboard.</p>
+  
+  <!-- Logout button -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <script>
+    // Check session
+    if (sessionStorage.getItem("admin") !== "true") {
+      window.location.href = "xlogin.html"; // redirect if not logged in
+    }
+
+    function logout() {
+      sessionStorage.removeItem("admin");
+      window.location.href = "xlogin.html";
+    }
+  </script>
+</body>
+</html>
+ 
