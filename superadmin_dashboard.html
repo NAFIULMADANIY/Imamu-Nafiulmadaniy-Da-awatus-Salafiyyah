@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Superadmin Dashboard</title>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Check whitelist role
+    const adminWhitelist = ["naliyuadam@gmail.com"]; // change if needed
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+    if (!loggedInUser || !adminWhitelist.includes(loggedInUser)) {
+      window.location.href = "login.html"; // redirect if not admin
+    }
+  </script>
 </head>
 <body>
-  <div id="nav-placeholder"></div>
-  <h1>Superadmin Dashboard</h1>
-  <p>This area is secured for Superadmin only. Monitor system activity and access sensitive tools.</p>
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
-  </footer>
-  <script src="nav.js" defer></script>
+  <h1>Welcome to Admin Dashboard</h1>
+  <p>You are logged in as: <b><script>document.write(sessionStorage.getItem("loggedInUser"));</script></b></p>
+  <nav>
+    <a href="index.html">🏠 Home</a> |
+    <a href="logout.html">🚪 Logout</a>
+  </nav>
+  <section>
+    <h2>Admin Tools</h2>
+    <ul>
+      <li>📂 Manage Users (basic)</li>
+      <li>📑 Manage Content</li>
+      <li>🔔 View Notifications</li>
+    </ul>
+  </section>
 </body>
 </html>
