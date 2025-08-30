@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 10px;
+    }
+    .admin-badge {
+      background-color: #007bff; /* Blue for Admin */
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>
+      Welcome, Admin 
+      <span class="badge admin-badge">Admin</span>
+    </h1>
+    <p>You are logged in with Admin access.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.clear();
+      window.location.href = "admin_login.html";
+    }
+  </script>
+</body>
+</html>
