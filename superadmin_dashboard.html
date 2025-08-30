@@ -1,33 +1,32 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqeedah - Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    // Check whitelist role
-    const adminWhitelist = ["naliyuadam@gmail.com"]; // change if needed
-    const loggedInUser = sessionStorage.getItem("loggedInUser");
-
-    if (!loggedInUser || !adminWhitelist.includes(loggedInUser)) {
-      window.location.href = "login.html"; // redirect if not admin
-    }
-  </script>
 </head>
 <body>
-  <h1>Welcome to Admin Dashboard</h1>
-  <p>You are logged in as: <b><script>document.write(sessionStorage.getItem("loggedInUser"));</script></b></p>
-  <nav>
-    <a href="index.html">🏠 Home</a> |
-    <a href="logout.html">🚪 Logout</a>
-  </nav>
-  <section>
-    <h2>Admin Tools</h2>
-    <ul>
-      <li>📂 Manage Users (basic)</li>
-      <li>📑 Manage Content</li>
-      <li>🔔 View Notifications</li>
-    </ul>
-  </section>
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <h1>Aqeedah Section</h1>
+    <p>Here you can learn about Islamic creed...</p>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    loadComponent("nav-placeholder", "nav.html");
+    loadComponent("footer-placeholder", "footer.html");
+
+    function loadComponent(id, file) {
+      fetch(file).then(res => res.text()).then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+    }
+  </script>
 </body>
 </html>
