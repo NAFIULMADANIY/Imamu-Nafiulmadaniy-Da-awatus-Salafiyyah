@@ -2,83 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
-  <div id="navbar"></div>
+  <div id="nav-placeholder"></div>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Welcome to Imamu Nafiulmadaniy Da’awatus Salafiyyah</h1>
-    <p>Spreading authentic Islamic knowledge with ease</p>
-  </header>
-
-  <!-- Cart/Grid Section -->
-  <section class="cart-container">
-    <div class="cart">
-      <a href="aqeedah.html">
-        <h2>Aqeedah</h2>
-        <p>Authentic Islamic beliefs explained.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="tafseer.html">
-        <h2>Tafseer</h2>
-        <p>Qur’an explanations by scholars.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="hadith.html">
-        <h2>Hadith</h2>
-        <p>Prophetic traditions with verification.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="children.html">
-        <h2>Children</h2>
-        <p>Games, quizzes, and learning for kids.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="marriage.html">
-        <h2>Marriage</h2>
-        <p>Guidance for a righteous family life.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="arabic.html">
-        <h2>Arabic</h2>
-        <p>Learn the language of the Qur’an.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="adhkar.html">
-        <h2>Adhkar</h2>
-        <p>Daily remembrances and supplications.</p>
-      </a>
-    </div>
-    <div class="cart">
-      <a href="downloads.html">
-        <h2>Downloads</h2>
-        <p>Books, lectures, and resources.</p>
-      </a>
-    </div>
-  </section>
+  <!-- Homepage Cards -->
+  <div id="cart-placeholder"></div>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
-  <!-- Script for Navbar -->
   <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
+    // Load shared components
+    function loadComponent(id, file) {
+      fetch(file).then(res => res.text()).then(data => {
+        document.getElementById(id).innerHTML = data;
       });
+    }
+    loadComponent("nav-placeholder", "nav.html");
+    loadComponent("cart-placeholder", "cart.html");
+    loadComponent("footer-placeholder", "footer.html");
   </script>
 </body>
 </html> 
