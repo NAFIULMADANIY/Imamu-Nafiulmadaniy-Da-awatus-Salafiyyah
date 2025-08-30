@@ -1,32 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aqeedah - Imamu Nafiulmadaniy</title>
+  <title>Superadmin Login - Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <div id="nav-placeholder"></div>
-
-  <main>
-    <h1>Aqeedah Section</h1>
-    <p>Here you can learn about Islamic creed...</p>
-  </main>
-
-  <!-- Footer -->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    loadComponent("nav-placeholder", "nav.html");
-    loadComponent("footer-placeholder", "footer.html");
-
-    function loadComponent(id, file) {
-      fetch(file).then(res => res.text()).then(data => {
-        document.getElementById(id).innerHTML = data;
-      });
-    }
-  </script>
+  <div class="login-container">
+    <h2>Superadmin Login</h2>
+    <form id="superadminLoginForm">
+      <input type="email" id="superadminEmail" placeholder="Superadmin Email" required>
+      <input type="password" id="superadminPassword" placeholder="Password" required>
+      <input type="text" id="superadminUnlock" placeholder="Superadmin Unlock Code" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="errorMsg" style="color: red;"></p>
+  </div>
+  <script src="superadmin_login.js"></script>
 </body>
-</html>
+</html>  
