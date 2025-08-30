@@ -1,0 +1,20 @@
+document.getElementById("superadminLoginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("superadminEmail").value.trim();
+  const password = document.getElementById("superadminPassword").value.trim();
+  const unlockCode = document.getElementById("superadminUnlock").value.trim();
+
+  // Whitelisted Superadmin email + password
+  const SUPERADMIN_EMAIL = "fidaakaabiywaummiyaarasulallah@gmail.com";  
+  const SUPERADMIN_PASS = "SuperAdminPassword123"; // Change this later
+  const UNLOCK_CODE = "NAFIU-LOCK-786"; // Only you know this 🔒
+
+  if (email === SUPERADMIN_EMAIL && password === SUPERADMIN_PASS && unlockCode === UNLOCK_CODE) {
+    localStorage.setItem("role", "superadmin");
+    localStorage.setItem("loggedIn", "true");
+    window.location.href = "superadmin_dashboard.html";
+  } else {
+    document.getElementById("errorMsg").innerText = "Access Denied! Invalid credentials or unlock code.";
+  }
+});
