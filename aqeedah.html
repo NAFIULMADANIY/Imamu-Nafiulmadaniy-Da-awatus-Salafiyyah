@@ -1,40 +1,32 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aqeedah – Imamu Nafiulmadaniy Da’awatus Salafiyyah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqeedah - Imamu Nafiulmadaniy</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Load Navigation -->
+  <!-- Navigation -->
   <div id="nav-placeholder"></div>
-  <script src="nav.js" defer></script>
 
-  <!-- Page Content -->
-  <main class="content">
-    <section class="section">
-      <h1>Aqeedah (Creed)</h1>
-      <p>Welcome to the Aqeedah section. Here, we explore the foundations of Islamic belief based on the Qur'an, Sunnah, and the understanding of the righteous Salaf.</p>
-
-      <ul>
-        <li>🕋 Belief in Allah</li>
-        <li>📜 Belief in the Prophets and Messengers</li>
-        <li>📖 Belief in the Books</li>
-        <li>👼 Belief in the Angels</li>
-        <li>⏳ Belief in the Day of Judgement</li>
-        <li>✍️ Belief in Qadar (Predestination)</li>
-      </ul>
-
-      <p>Each topic will be expanded with authentic texts, audio, and video materials in future updates, in shaa Allah.</p>
-    </section>
+  <main>
+    <h1>Aqeedah Section</h1>
+    <p>Here you can learn about Islamic creed...</p>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Imamu Nafiulmadaniy Da’awatus Salafiyyah. All rights reserved.</p>
-  </footer>
+  <div id="footer-placeholder"></div>
 
+  <script>
+    loadComponent("nav-placeholder", "nav.html");
+    loadComponent("footer-placeholder", "footer.html");
+
+    function loadComponent(id, file) {
+      fetch(file).then(res => res.text()).then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+    }
+  </script>
 </body>
 </html>
